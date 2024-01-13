@@ -37,17 +37,17 @@ Variables
    --clr-grey-8: hsl(210, 31%, 80%);
    --clr-grey-9: hsl(212, 33%, 89%);
    --clr-grey-10: hsl(210, 36%, 96%);
-   --clr-white: #fff;
+   --clr-white: #FFFFFF;
    --clr-red-dark: hsl(360, 67%, 44%);
    --clr-red-light: hsl(360, 71%, 66%);
    --clr-green-dark: hsl(125, 67%, 44%);
    --clr-green-light: hsl(125, 71%, 66%);
-   --clr-black: #222;
+   --clr-black: #1c1c1d;
    --ff-primary: "Roboto", sans-serif;
    --ff-secondary: "Open Sans", sans-serif;
    --transition: all 0.3s linear;
    --spacing: 0.1rem;
-   --radius: 0.25rem;
+   --radius: 0.5rem;
    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
    --max-width: 1170px;
@@ -130,7 +130,7 @@ p {
    }
 
    h4 {
-      font-size: 1rem;
+      font-size: 1.8rem;
    }
 
    body {
@@ -141,34 +141,11 @@ p {
    h2,
    h3,
    h4 {
-      line-height: 1;
+      line-height: 1.5;
    }
 }
 
 /*  global classes */
-
-/* section */
-.section {
-   padding: 5rem 0;
-}
-
-.section-center {
-   width: 90vw;
-   margin: 0 auto;
-   max-width: 1170px;
-}
-
-@media screen and (min-width: 992px) {
-   .section-center {
-      width: 95vw;
-   }
-}
-
-main {
-   min-height: 100vh;
-   display: grid;
-   place-items: center;
-}
 
 /*
 =============== 
@@ -176,7 +153,7 @@ Nav
 ===============
 */
 nav {
-   background: var(--clr-white);
+   background: var(--clr-black);
    height: 3rem;
    display: grid;
    align-items: center;
@@ -186,7 +163,7 @@ nav {
 .nav-center {
    width: 90vw;
    max-width: var(--fixed-width);
-   margin: 0 auto;
+   margin: 5px auto;
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -205,6 +182,9 @@ nav a {
    text-transform: capitalize;
    font-weight: 700;
    font-size: 1rem;
+   background-color: var(--clr-primary-10);
+   padding: 5px;
+   border-radius: 5px;
    color: var(--clr-primary-1);
    letter-spacing: var(--spacing);
    margin-right: 1rem;
@@ -231,7 +211,7 @@ main {
 
 .container h2 {
    background: var(--clr-black);
-   color: var(--clr-white);
+   color: var(--clr-grey-10);
    padding: 1rem;
    border-radius: var(--radius);
    margin-bottom: 2.5rem;
@@ -250,15 +230,15 @@ main {
    display: inline-block;
    font-weight: 700;
    transition: var(--transition);
-   border: 2px solid var(--clr-black);
+   border: 3px solid var(--clr-black);
    cursor: pointer;
    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
    border-radius: var(--radius);
-   font-size: 1rem;
+   font-size: 1.5rem;
    padding: 0.75rem 1.25rem;
 }
 
 .btn-hero:hover {
-   color: var(--clr-white);
-   background: var(--clr-black);
+   color: var(--clr-black);
+   background: var(--clr-white);
 }
